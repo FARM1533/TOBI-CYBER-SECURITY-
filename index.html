@@ -1,149 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tobi Fatai – Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-    body { background:#fdf6f0; color:#333; line-height:1.6; }
-    nav { background:#a63f00; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;}
-    nav a { color:white; text-decoration:none; margin-left:15px; font-weight:600; }
-    nav a:hover { text-decoration:underline; }
-    section { padding:60px 20px; max-width:1000px; margin:auto; }
-    h1, h2, h3 { color:#a63f00; margin-bottom:20px; }
-    h1 { font-size:2.5rem; text-align:center; }
-    h2 { font-size:2rem; text-align:center; margin-bottom:30px; }
-    .section-content { margin-top:20px; }
-    pre { background:#fff3e6; padding:15px; border-radius:8px; overflow-x:auto;}
-    a.button { display:inline-block; background:#a63f00; color:white; padding:10px 15px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:10px; }
-    a.button:hover { background:#873200; }
-    .lab { margin-bottom:30px; }
-    .scripts { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-    .script-card { background:white; padding:15px; border-radius:8px; width:250px; box-shadow:0 4px 8px rgba(0,0,0,0.1);}
-    .blog-post { background:white; padding:20px; border-radius:8px; margin-bottom:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
-    footer { background:#a63f00; color:white; text-align:center; padding:15px; margin-top:40px;}
-    footer a { color:white; text-decoration:none;}
-    footer a:hover { text-decoration:underline;}
-    .social { text-align:center; margin-top:20px;}
-    .social a { margin:0 10px; color:#a63f00; font-size:1.5rem;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tobi Fatai | Cybersecurity Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+/* NAV */
+nav {
+  background:#020617;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav a {
+  color:#38bdf8;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav a:hover {
+  color:white;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1 {
+  font-size:2.8rem;
+  color:#38bdf8;
+}
+
+.hero p {
+  margin-top:15px;
+  font-size:1.2rem;
+  color:#cbd5f5;
+}
+
+/* SECTIONS */
+section {
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h2 {
+  text-align:center;
+  margin-bottom:40px;
+  color:#38bdf8;
+}
+
+/* CARDS */
+.card {
+  background:#020617;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:20px;
+  box-shadow:0 0 10px rgba(56,189,248,0.2);
+}
+
+/* SCRIPT GRID */
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.script {
+  flex:1 1 300px;
+  background:#020617;
+  padding:15px;
+  border-radius:10px;
+}
+
+pre {
+  background:#0f172a;
+  padding:10px;
+  border-radius:6px;
+  overflow-x:auto;
+  font-size:0.85rem;
+}
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  background:#38bdf8;
+  color:black;
+  padding:8px 12px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* SOCIAL FLOAT */
+.float {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float a {
+  background:#38bdf8;
+  color:black;
+  padding:12px;
+  border-radius:50%;
+  text-align:center;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  margin-top:40px;
+}
+</style>
 </head>
+
 <body>
 
 <nav>
   <div><strong>Tobi Fatai</strong></div>
   <div>
     <a href="#labs">Labs</a>
+    <a href="#projects">Projects</a>
     <a href="#scripts">Scripts</a>
     <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<section id="home">
+<div class="hero">
   <h1>Cybersecurity Portfolio</h1>
-  <p style="text-align:center; font-size:1.2rem;">Documenting labs, scripts, and practical security projects.</p>
-</section>
+  <p>Practical labs, scripts, and real-world security learning journey.</p>
+</div>
 
 <section id="labs">
-  <h2>Lab Notes</h2>
-  <div class="section-content">
-    <div class="lab">
-      <h3>Lab: SQL Injection on Juice Shop</h3>
-      <p><strong>Platform:</strong> TryHackMe</p>
-      <p><strong>Tools:</strong> Burp Suite Community</p>
-      <p><strong>Method:</strong> Identified injectable field, used UNION SELECT to read database info</p>
-      <p><strong>Lessons:</strong> Parameterized queries and input validation prevent SQLi</p>
-      <a href="#" class="button">View Full Notes</a>
-    </div>
-    <div class="lab">
-      <h3>Lab: Linux Basics</h3>
-      <p><strong>Platform:</strong> TryHackMe</p>
-      <p><strong>Tasks:</strong> Explored filesystem, permissions, users</p>
-      <p><strong>Lessons:</strong> Linux proficiency is essential for security work</p>
-      <a href="#" class="button">View Full Notes</a>
-    </div>
-  </div>
+<h2>Lab Notes</h2>
+
+<div class="card">
+<h3>SQL Injection – Juice Shop</h3>
+<p>Used Burp Suite to identify vulnerable input and extract database data using UNION SELECT.</p>
+</div>
+
+<div class="card">
+<h3>Linux Basics</h3>
+<p>Explored filesystem, permissions, and user management.</p>
+</div>
+
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>SOC Investigation Report</h3>
+<p><strong>Incident:</strong> Suspicious login attempts<br>
+<strong>What I observed:</strong> Multiple failed logins from the same IP<br>
+<strong>What it could mean:</strong> Possible brute force attack<br>
+<strong>What I would do:</strong> Block the IP, alert the team, enforce MFA</p>
+</div>
+
 </section>
 
 <section id="scripts">
-  <h2>Scripts</h2>
-  <div class="scripts">
-    <div class="script-card">
-      <h3>Port Scanner (Python)</h3>
-      <pre>
-import socket
+<h2>Scripts</h2>
 
+<div class="grid">
+
+<div class="script">
+<h3>Port Scanner (Python)</h3>
+<pre>
+import socket
 target = '127.0.0.1'
 for port in range(20,1025):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    result = s.connect_ex((target, port))
-    if result == 0:
-        print(f"Port {port} is open")
+    s = socket.socket()
+    if s.connect_ex((target, port)) == 0:
+        print(port)
     s.close()
-      </pre>
-      <a href="#" class="button">View on GitHub</a>
-    </div>
+</pre>
+</div>
 
-    <div class="script-card">
-      <h3>Password Checker (Bash)</h3>
-      <pre>
+<div class="script">
+<h3>Password Checker (Bash)</h3>
+<pre>
 #!/bin/bash
-while read p; do
-  echo "$p" | grep -E '.{6,}'
-done < passwords.txt
-      </pre>
-      <a href="#" class="button">View on GitHub</a>
-    </div>
-  </div>
+grep -E '.{6,}' passwords.txt
+</pre>
+</div>
+
+</div>
 </section>
 
 <section id="blog">
-  <h2>Blog</h2>
-  <div class="section-content">
-    <div class="blog-post">
-      <h3>How I Exploited SQL Injection</h3>
-      <p>I practiced SQL Injection on OWASP Juice Shop:</p>
-      <ol>
-        <li>Found injectable input field</li>
-        <li>Tested payload: <code>' OR '1'='1 --</code></li>
-        <li>Extracted database info</li>
-        <li>Learned proper defenses</li>
-      </ol>
-      <p>See the related scripts and notes on GitHub.</p>
-    </div>
+<h2>Blog</h2>
 
-    <div class="blog-post">
-      <h3>Linux Basics Summary</h3>
-      <p>Worked on Linux commands: permissions, file structure, users, and groups.</p>
-      <ul>
-        <li>chmod & chown basics</li>
-        <li>Understanding file ownership</li>
-        <li>Efficient navigation and scripting</li>
-      </ul>
-      <p>Scripts and notes available on my GitHub.</p>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h3>SQL Injection Learning</h3>
+<p>Practiced exploiting login bypass and learned importance of input validation.</p>
+</div>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p style="text-align:center;">📞 WhatsApp: <a href="https://wa.me/qr/QI47S2UZ7DXED1" target="_blank">Chat on WhatsApp</a></p>
-  <p style="text-align:center;">📸 Instagram: <a href="https://www.instagram.com/tobi__fatai/" target="_blank">@tobi__fatai</a></p>
-  <p style="text-align:center;">📘 Facebook: <a href="https://www.facebook.com/tobi.fatai.5/" target="_blank">Tobi Fatai</a></p>
-  <div class="social">
-    <a href="https://www.instagram.com/tobi__fatai/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/tobi.fatai.5/" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://wa.me/qr/QI47S2UZ7DXED1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
+<div class="card">
+<h3>Linux Skills</h3>
+<p>Understanding permissions and system navigation is key for cybersecurity.</p>
+</div>
+
 </section>
 
 <footer>
-  &copy; 2026 Tobi Fatai | Cybersecurity Portfolio
+© 2026 Tobi Fatai | Cybersecurity Portfolio
 </footer>
 
+<!-- FLOATING BUTTONS -->
+<div class="float">
+<a href="https://wa.me/qr/QI47S2UZ7DXED1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/tobi__fatai/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/tobi.fatai.5/" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
 </body>
-  </html>
+</html>
